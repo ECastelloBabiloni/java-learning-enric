@@ -8,7 +8,7 @@ public class BuscarPrimerSuspenso {
         if (posicion == -1){
             System.out.println("No hay alumnos suspendidos");
         } else {
-            System.out.println("EL primer alumno suspendido es " + alumnos[posicion] + " con una nota de " + notas[posicion]);
+            System.out.println("El primer alumno suspendido es " + alumnos[posicion] + " con una nota de " + notas[posicion]);
         }
 
     }
