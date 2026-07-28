@@ -5,12 +5,36 @@ public class CalculadoraMasaPizzaJava {
 
         System.out.println("Numero de comensales");
         int comensales = teclado.nextInt();
+        teclado.nextLine();
         System.out.println("Cantidad de masa en gramos por persona (320)");
-        int gramosMasa = teclado.nextInt();
-        System.out.println("Hidratacion de la masa");
-        double inputHidratacion = teclado.nextDouble();
+        String inputGramosMasa = teclado.nextLine();
+        int gramosMasa;
+
+        if (inputGramosMasa.isEmpty()){
+            gramosMasa = 320;
+        }else{
+            gramosMasa = Integer.parseInt(inputGramosMasa);
+        }
+
+        System.out.println("Hidratacion de la masa (70%)");
+        String entradaHidratacion = teclado.nextLine();
+        double inputHidratacion;
+
+        if (entradaHidratacion.isEmpty()){
+            inputHidratacion = 70;
+        }else{
+            inputHidratacion = Double.parseDouble(entradaHidratacion);
+        }
+
         System.out.println("Porcentaje de Sal (2%)");
-        double inputSal = teclado.nextDouble();
+        String entradaSal = teclado.nextLine();
+        double inputSal;
+
+        if (entradaSal.isEmpty()){
+            inputSal = 2;
+        }else{
+            inputSal = Double.parseDouble(entradaSal);
+        }
 
         double porcentajeHidratacion = inputHidratacion / 100;
         double porcentajeSal = inputSal / 100;
@@ -19,6 +43,13 @@ public class CalculadoraMasaPizzaJava {
         double agua = calcularAgua(harina, porcentajeHidratacion);
         double sal = calcularSal(harina, porcentajeSal);
 
+        System.out.println("Comensales: " + comensales);
+        System.out.println("Gramos por persona: " + gramosMasa + "g");
+        System.out.println("Hidratacion: " + inputHidratacion + "%");
+        System.out.println("Porcentaje de sal: " + inputSal + "%");
+        System.out.println();
+        System.out.println("RESUMEN DE LA RECETA: ");
+        System.out.println();
         System.out.println("El peso total de la masa es: "+ pesoTotalMasa+ "g");
         System.out.println("Harina: " + Math.round(harina) + "g");
         System.out.println("Agua: " + Math.round(agua) + "g");
