@@ -12,15 +12,15 @@ public class ResumenPedidos {
     }
     public static double calcularTotalPedidos(double[] pedidos){
         double suma = 0;
-        for (int i = 0; i < pedidos.length; ++i){
-            suma += pedidos[i];
+        for (double precio: pedidos){
+            suma += precio;
         }
         return suma;
     }
     public static int contarPedidosConEnvioGratis(double[] pedidos){
         int contador = 0;
-        for (int i = 0; i < pedidos.length; ++i){
-            if (pedidos[i] >= 50){
+        for (double precio: pedidos){
+            if (precio >= 50){
                 contador += 1;
             }
         }
@@ -28,9 +28,9 @@ public class ResumenPedidos {
     }
     public static double buscarPedidoMasCaro(double[] pedidos){
         double pedidoMasCaro = pedidos[0];
-        for (int i = 1; i < pedidos.length; ++i){
-            if (pedidos[i] > pedidoMasCaro){
-                pedidoMasCaro = pedidos[i];
+        for (double pedido: pedidos){
+            if (pedido > pedidoMasCaro){
+                pedidoMasCaro = pedido;
             }
         }
         return pedidoMasCaro;
