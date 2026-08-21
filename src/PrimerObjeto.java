@@ -35,5 +35,6 @@ public class PrimerObjeto {
             System.out.println("La venta NO ha sido posible, solo quedan "+ harina.cantidad + " unidades de "+ harina.nombre);
         }
 
+
     }
 }
