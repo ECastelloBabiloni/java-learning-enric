@@ -1,12 +1,22 @@
 public class Producto{
-    public String nombre;
-    public double precio;
-    public int cantidad;
+    private String nombre;
+    private double precio;
+    private int cantidad;
 
     public Producto(String nombre, double precio, int cantidad) {
         this.nombre = nombre;
         this.precio = precio;
         this.cantidad = cantidad;
+    }
+
+    public String getNombre(){
+        return this.nombre;
+    }
+    public double getPrecio(){
+        return this.precio;
+    }
+    public int getCantidad(){
+        return this.cantidad;
     }
 
     public double calcularPrecioTotal(){
