@@ -27,9 +27,15 @@ public class Producto{
         double descuento = porcentajeDescuento * precioTotal / 100;
         return precioTotal - descuento;
     }
-    public void agregarUnidades(int unidadesAñadidas){
-        this.cantidad = this.cantidad +unidadesAñadidas;
+    public boolean agregarUnidades(int unidadesAñadidas){
+        if (unidadesAñadidas > 0){
+            this.cantidad = this.cantidad +unidadesAñadidas;
+            return true;
+        }else{
+            return false;
+        }
     }
+
     public boolean cambiarPrecio(double preciModificado){
         if (preciModificado > 0){
             this.precio = preciModificado;

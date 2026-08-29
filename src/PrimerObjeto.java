@@ -47,7 +47,17 @@ public class PrimerObjeto {
             System.out.println("EL precio del "+ tomate.getNombre() + " no ha podido modificarse");
         }
 
+        if (tomate.agregarUnidades(0)){
+            System.out.println("La cantidad de "+ tomate.getNombre() + " es de " + tomate.getCantidad());
+        }else{
+            System.out.println("La cantidad de "+ tomate.getNombre() + " no ha podido modificarse");
+        }
 
+        if (tomate.agregarUnidades(3)){
+            System.out.println("La cantidad de "+ tomate.getNombre() + " es de " + tomate.getCantidad());
+        }else{
+            System.out.println("La cantidad de "+ tomate.getNombre() + " no ha podido modificarse");
+        }
 
     }
 }
