@@ -34,5 +34,20 @@ public class PrimerObjeto {
         }else{
             System.out.println("La venta NO ha sido posible, solo quedan "+ harina.getCantidad() + " unidades de "+ harina.getNombre());
         }
+
+        if (tomate.cambiarPrecio(-2.3)){
+            System.out.println("EL precio del "+ tomate.getNombre() + " es de " + tomate.getPrecio());
+        }else{
+            System.out.println("EL precio del "+ tomate.getNombre() + " no ha podido modificarse");
+        }
+
+        if (tomate.cambiarPrecio(2.5)){
+            System.out.println("EL precio del "+ tomate.getNombre() + " es de " + tomate.getPrecio() + " Euros");
+        }else{
+            System.out.println("EL precio del "+ tomate.getNombre() + " no ha podido modificarse");
+        }
+
+
+
     }
 }

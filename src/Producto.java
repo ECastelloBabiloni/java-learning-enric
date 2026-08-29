@@ -30,8 +30,13 @@ public class Producto{
     public void agregarUnidades(int unidadesAñadidas){
         this.cantidad = this.cantidad +unidadesAñadidas;
     }
-    public void cambiarPrecio(double preciModificado){
-        this.precio = preciModificado;
+    public boolean cambiarPrecio(double preciModificado){
+        if (preciModificado > 0){
+            this.precio = preciModificado;
+            return true;
+        }else{
+            return false;
+        }
     }
     public boolean venderUnidades(int vender){
         if (this.cantidad < vender){
