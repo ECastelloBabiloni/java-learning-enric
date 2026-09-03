@@ -45,11 +45,11 @@ public class Producto{
         }
     }
     public boolean venderUnidades(int vender){
-        if (this.cantidad < vender){
-            return false;
-        }else{
+        if (hayStockSuficiente(vender)){
             this.cantidad = this.cantidad - vender;
             return true;
+        }else{
+            return false;
         }
     }
     public boolean hayStockSuficiente(int unidadesSolicitadas){
