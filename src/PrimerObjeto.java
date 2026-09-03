@@ -59,5 +59,18 @@ public class PrimerObjeto {
             System.out.println("La cantidad de "+ tomate.getNombre() + " no ha podido modificarse");
         }
 
+        if (harina.hayStockSuficiente(2)){
+            System.out.println("Si hay suficiente stock de " + harina.getNombre());
+        }else{
+            System.out.println("No hay suficiente stock de " + harina.getNombre());
+        }
+
+        if (harina.hayStockSuficiente(10)){
+            System.out.println("Si hay suficiente stock de " + harina.getNombre());
+        }else{
+            System.out.println("No hay suficiente stock de " + harina.getNombre());
+        }
+
+
     }
 }

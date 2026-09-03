@@ -52,4 +52,11 @@ public class Producto{
             return true;
         }
     }
+    public boolean hayStockSuficiente(int unidadesSolicitadas){
+        if (unidadesSolicitadas <= this.cantidad){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
