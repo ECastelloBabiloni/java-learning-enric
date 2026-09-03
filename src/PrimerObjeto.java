@@ -3,6 +3,11 @@ public class PrimerObjeto {
 
         Producto harina = new Producto("harina", 2.50, 3);
         Producto tomate = new Producto("Tomate", 1.20, 4);
+        Producto aceite = new Producto("Aceite", 9.2, 5);
+        Producto[] productosTienda = {harina, tomate, aceite};
+        Inventario inventario = new Inventario(productosTienda);
+
+        System.out.println("En total hay "+ inventario.cantidadProductos()+ " articulos en el inventario");
 
         System.out.println("El producto " + harina.getNombre() + " cuesta " + harina.getPrecio() + " Euros, y en la cesta hay " + harina.getCantidad() + " unidades");
         System.out.println("El producto " + tomate.getNombre() + " cuesta " + tomate.getPrecio() + " Euros, y en la cesta hay " + tomate.getCantidad() + " unidades");
