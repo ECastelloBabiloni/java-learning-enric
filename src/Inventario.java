@@ -28,4 +28,13 @@ public class Inventario {
         }
         return unidades;
     }
+    public Producto calcularProductoConMasUnidades(){
+       Producto productoConMasUnidades = this.productos[0];
+       for (int i = 1; i < this.productos.length; i++){
+           if (this.productos[i].getCantidad() > productoConMasUnidades.getCantidad()){
+               productoConMasUnidades = this.productos[i];
+           }
+       }
+       return productoConMasUnidades;
+    }
 }

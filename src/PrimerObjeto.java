@@ -91,6 +91,6 @@ public class PrimerObjeto {
 
         System.out.println("El valor total en Euros del Stock es de "+ inventario.calcularPrecioStockTotal());
         System.out.println("La cantidad de unidades dentro del Stock es de "+  inventario.calcularUnidadesTotales());
-
+        System.out.println("El producto con mas cantidad de unidades es "+  inventario.calcularProductoConMasUnidades().getNombre());
     }
 }
