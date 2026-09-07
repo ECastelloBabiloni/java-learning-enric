@@ -89,7 +89,8 @@ public class PrimerObjeto {
 
         System.out.println("El proveedor del producto "+ tomate.getNombre() + " es "+ tomate.getProveedor().getNombre());
 
-        System.out.println(inventario.calcularPrecioStockTotal());
+        System.out.println("El valor total en Euros del Stock es de "+ inventario.calcularPrecioStockTotal());
+        System.out.println("La cantidad de unidades dentro del Stock es de "+  inventario.calcularUnidadesTotales());
 
     }
 }

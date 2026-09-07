@@ -21,4 +21,11 @@ public class Inventario {
         }
         return precioStockTotal;
     }
+    public int calcularUnidadesTotales(){
+        int unidades = 0;
+        for (int i = 0; i < this.productos.length; i++){
+            unidades += this.productos[i].getCantidad();
+        }
+        return unidades;
+    }
 }
