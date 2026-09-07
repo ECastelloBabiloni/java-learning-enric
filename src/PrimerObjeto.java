@@ -7,6 +7,9 @@ public class PrimerObjeto {
         Producto[] productosTienda = {harina, tomate, aceite};
         Inventario inventario = new Inventario(productosTienda);
 
+        Proveedor babiloni = new Proveedor("Babiloni", "Borriol");
+        Proveedor fMarisa = new Proveedor("FrutasMarisa", "Castellon");
+
         System.out.println("En total hay "+ inventario.cantidadProductos()+ " articulos en el inventario");
 
         System.out.println("El producto " + harina.getNombre() + " cuesta " + harina.getPrecio() + " Euros, y en la cesta hay " + harina.getCantidad() + " unidades");
@@ -75,6 +78,9 @@ public class PrimerObjeto {
         }else{
             System.out.println("No hay suficiente stock de " + harina.getNombre());
         }
+
+        System.out.println("El proveedor "+ fMarisa.getNombre() + " esta ubicado en " + fMarisa.getCiudad());
+        System.out.println("El proveedor "+ babiloni.getNombre() + " esta ubicado en " + babiloni.getCiudad());
 
 
     }
