@@ -89,5 +89,7 @@ public class PrimerObjeto {
 
         System.out.println("El proveedor del producto "+ tomate.getNombre() + " es "+ tomate.getProveedor().getNombre());
 
+        System.out.println(inventario.calcularPrecioStockTotal());
+
     }
 }

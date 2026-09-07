@@ -14,4 +14,11 @@ public class Inventario {
         }
 
     }
+    public double calcularPrecioStockTotal(){
+        double precioStockTotal = 0;
+        for (int i = 0; i < this.productos.length; i++){
+            precioStockTotal += productos[i].calcularPrecioTotal();
+        }
+        return precioStockTotal;
+    }
 }
