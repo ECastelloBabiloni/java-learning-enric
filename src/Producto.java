@@ -2,11 +2,14 @@ public class Producto{
     private String nombre;
     private double precio;
     private int cantidad;
+    private Proveedor proveedor;
 
-    public Producto(String nombre, double precio, int cantidad) {
+    public Producto(String nombre, double precio, int cantidad, Proveedor proveedor) {
         this.nombre = nombre;
         this.precio = precio;
         this.cantidad = cantidad;
+        this.proveedor = proveedor;
+
     }
 
     public String getNombre(){
@@ -17,6 +20,9 @@ public class Producto{
     }
     public int getCantidad(){
         return this.cantidad;
+    }
+    public Proveedor getProveedor() {
+        return proveedor;
     }
 
     public double calcularPrecioTotal(){

@@ -1,14 +1,15 @@
 public class PrimerObjeto {
     public static void main(String[] args) {
 
-        Producto harina = new Producto("harina", 2.50, 3);
-        Producto tomate = new Producto("Tomate", 1.20, 4);
-        Producto aceite = new Producto("Aceite", 9.2, 5);
+        Proveedor babiloni = new Proveedor("Babiloni", "Borriol");
+        Proveedor fMarisa = new Proveedor("FrutasMarisa", "Castellon");
+
+        Producto harina = new Producto("harina", 2.50, 3, babiloni);
+        Producto tomate = new Producto("Tomate", 1.20, 4, fMarisa);
+        Producto aceite = new Producto("Aceite", 9.2, 5, babiloni);
         Producto[] productosTienda = {harina, tomate, aceite};
         Inventario inventario = new Inventario(productosTienda);
 
-        Proveedor babiloni = new Proveedor("Babiloni", "Borriol");
-        Proveedor fMarisa = new Proveedor("FrutasMarisa", "Castellon");
 
         System.out.println("En total hay "+ inventario.cantidadProductos()+ " articulos en el inventario");
 
@@ -82,6 +83,9 @@ public class PrimerObjeto {
         System.out.println("El proveedor "+ fMarisa.getNombre() + " esta ubicado en " + fMarisa.getCiudad());
         System.out.println("El proveedor "+ babiloni.getNombre() + " esta ubicado en " + babiloni.getCiudad());
 
+
+
+        System.out.println("El proveedor del producto "+ tomate.getNombre() + " es "+ tomate.getProveedor().getNombre());
 
     }
 }
