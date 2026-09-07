@@ -4,11 +4,13 @@ public class PrimerObjeto {
         Proveedor babiloni = new Proveedor("Babiloni", "Borriol");
         Proveedor fMarisa = new Proveedor("FrutasMarisa", "Castellon");
 
-        Producto harina = new Producto("harina", 2.50, 3, babiloni);
+        Producto harina = new Producto("Harina", 2.50, 3, babiloni);
         Producto tomate = new Producto("Tomate", 1.20, 4, fMarisa);
         Producto aceite = new Producto("Aceite", 9.2, 5, babiloni);
         Producto[] productosTienda = {harina, tomate, aceite};
         Inventario inventario = new Inventario(productosTienda);
+
+        inventario.mostrarProductosConProveedor();
 
 
         System.out.println("En total hay "+ inventario.cantidadProductos()+ " articulos en el inventario");
