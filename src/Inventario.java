@@ -37,4 +37,14 @@ public class Inventario {
        }
        return productoConMasUnidades;
     }
+
+    public Producto calcularProductoMayorValorStock(){
+        Producto productoMayorValor = this.productos[0];
+        for (int i = 1; i < this.productos.length; i++){
+            if (this.productos[i].calcularPrecioTotal() > productoMayorValor.calcularPrecioTotal()){
+                productoMayorValor = this.productos[i];
+            }
+        }
+        return productoMayorValor;
+    }
 }
