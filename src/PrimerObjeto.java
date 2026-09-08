@@ -94,5 +94,7 @@ public class PrimerObjeto {
         System.out.println("El producto con mas cantidad de unidades es "+  inventario.calcularProductoConMasUnidades().getNombre());
         Producto productoMasValorStock = inventario.calcularProductoMayorValorStock();
         System.out.println("El producto con mas valor en el stock es "+ productoMasValorStock.getNombre()+ ", con un valor de "+ productoMasValorStock.calcularPrecioTotal()+ " Euros");
+
+        inventario.mostrarProductosConStockBajo(4);
     }
 }

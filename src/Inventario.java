@@ -47,4 +47,11 @@ public class Inventario {
         }
         return productoMayorValor;
     }
+    public void mostrarProductosConStockBajo(int limite){
+        for (int i = 0; i < this.productos.length; i++){
+            if (this.productos[i].getCantidad() <= limite){
+                System.out.println("Deberias pedir "+ this.productos[i].getNombre()+ ", solamente quedan " + this.productos[i].getCantidad()+" unidades en el Stock");
+            }
+        }
+    }
 }
