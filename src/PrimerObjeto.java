@@ -1,5 +1,7 @@
+import java.util.Scanner;
 public class PrimerObjeto {
     public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
 
         Proveedor babiloni = new Proveedor("Babiloni", "Borriol");
         Proveedor fMarisa = new Proveedor("FrutasMarisa", "Castellon");
@@ -9,6 +11,9 @@ public class PrimerObjeto {
         Producto aceite = new Producto("Aceite", 9.2, 5, babiloni);
         Producto[] productosTienda = {harina, tomate, aceite};
         Inventario inventario = new Inventario(productosTienda);
+
+        System.out.println("¿Que producto quieres buscar?");
+        String nombreBuscado = teclado.nextLine();
 
         inventario.mostrarProductosConProveedor();
 
@@ -96,5 +101,15 @@ public class PrimerObjeto {
         System.out.println("El producto con mas valor en el stock es "+ productoMasValorStock.getNombre()+ ", con un valor de "+ productoMasValorStock.calcularPrecioTotal()+ " Euros");
 
         inventario.mostrarProductosConStockBajo(4);
+        System.out.println("El proveedor de "+ aceite.getNombre() +" es " +inventario.buscarProveedorPorNombreProducto("Aceite"));
+
+        Producto productoBuscado = inventario.buscarProductoPorNombre(nombreBuscado);
+
+        if (productoBuscado != null){
+            System.out.println("El proveedor de "+ productoBuscado.getNombre() +" es " + productoBuscado.getProveedor().getNombre());
+        }else{
+            System.out.println("Producto no encontrado");
+        }
+
     }
 }

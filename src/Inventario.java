@@ -54,4 +54,23 @@ public class Inventario {
             }
         }
     }
+    public String buscarProveedorPorNombreProducto(String nombreBuscado){
+        String nombreProveedor = "Nombre no encontrado";
+        for (int i = 0; i < this.productos.length; i++){
+            if( this.productos[i].getNombre().equals(nombreBuscado)){
+                nombreProveedor = this.productos[i].getProveedor().getNombre();
+                break;
+            }
+        }
+        return nombreProveedor;
+    }
+    public Producto buscarProductoPorNombre(String nombreBuscado){
+        for (int i = 0; i < this.productos.length; i++){
+            if (this.productos[i].getNombre().equalsIgnoreCase(nombreBuscado)) {
+                return this.productos[i];
+            }
+        }
+        return null;
+    }
+
 }
