@@ -107,6 +107,7 @@ public class PrimerObjeto {
 
         if (productoBuscado != null){
             System.out.println("El proveedor de "+ productoBuscado.getNombre() +" es " + productoBuscado.getProveedor().getNombre());
+            System.out.println("El precio del producto "+ productoBuscado.getNombre() +" es de  " + productoBuscado.getPrecio()+ " Euros, y tenemos "+productoBuscado.getCantidad()+ " unidades en el Stock");
         }else{
             System.out.println("Producto no encontrado");
         }
