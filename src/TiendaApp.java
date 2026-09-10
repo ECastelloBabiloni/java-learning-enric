@@ -32,9 +32,21 @@ public class TiendaApp {
         if (productoBuscado != null){
             System.out.println("El proveedor de "+ productoBuscado.getNombre() +" es " + productoBuscado.getProveedor().getNombre());
             System.out.println("El precio del producto "+ productoBuscado.getNombre() +" es de  " + productoBuscado.getPrecio()+ " Euros, y tenemos "+productoBuscado.getCantidad()+ " unidades en el Stock");
+            // VENTAS
+            System.out.println("¿Cuantas unidades quiere comprar?");
+            int vender = teclado.nextInt();
+
+            if (productoBuscado.venderUnidades(vender)){
+                System.out.println("La compra se ha realizado correctamente, ahora quedan " + productoBuscado.getCantidad()+ " unidades de "+ productoBuscado.getNombre());
+            }else{
+                System.out.println("No hay stock suficiente");
+            }
         }else{
             System.out.println("Producto no encontrado");
         }
+
+
+
 
     }
 }
