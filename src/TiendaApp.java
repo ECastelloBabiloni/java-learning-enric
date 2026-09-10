@@ -39,7 +39,12 @@ public class TiendaApp {
             if (productoBuscado.venderUnidades(vender)){
                 System.out.println("La compra se ha realizado correctamente, ahora quedan " + productoBuscado.getCantidad()+ " unidades de "+ productoBuscado.getNombre());
             }else{
-                System.out.println("No hay stock suficiente");
+                if (vender > 0){
+                    System.out.println("No hay stock suficiente");
+                }else{
+                    System.out.println("Las unidades introducidas han de ser mayores que 0");
+                }
+
             }
         }else{
             System.out.println("Producto no encontrado");
