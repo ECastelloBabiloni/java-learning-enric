@@ -21,6 +21,7 @@ public class TiendaApp {
 
         // INPUT?
 
+        inventarioTiendaApp.mostrarProductosConProveedor();
         System.out.println("¿Que producto estas buscando?");
         String nombreBuscado = teclado.nextLine();
 
