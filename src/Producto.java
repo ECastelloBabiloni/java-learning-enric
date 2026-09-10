@@ -59,7 +59,7 @@ public class Producto{
         }
     }
     public boolean hayStockSuficiente(int unidadesSolicitadas){
-        if (unidadesSolicitadas <= this.cantidad){
+        if (unidadesSolicitadas <= this.cantidad && unidadesSolicitadas > 0){
             return true;
         }else{
             return false;
