@@ -37,9 +37,11 @@ public class TiendaApp {
 
             if (teclado.hasNextInt()){
                 int vender = teclado.nextInt();
-
+                
                 if (productoBuscado.venderUnidades(vender)){
+                    double importeVenta = vender * productoBuscado.getPrecio();
                     System.out.println("La compra se ha realizado correctamente, ahora quedan " + productoBuscado.getCantidad()+ " unidades de "+ productoBuscado.getNombre());
+                    System.out.println("El importe total de la compra es "+ importeVenta + " Euros");
                 }else{
                     if (vender > 0){
                         System.out.println("No hay stock suficiente");
