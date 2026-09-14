@@ -14,13 +14,15 @@ public class TiendaApp {
         Producto tomate = new Producto("Tomate", 1.2, 4, fMarisa);
         Producto aceite = new Producto("Aceite", 9.2, 5, babiloni);
 
+
+
         //Array tiendaApp e Inventario
 
         Producto[] productosTiendaApp = {harina, tomate, aceite};
         Inventario inventarioTiendaApp = new Inventario(productosTiendaApp);
 
         String continuar = "s";
-        double importeTotal = 0;
+        Pedido pedidoActual = new Pedido();
 
         while (continuar.equalsIgnoreCase("s")) {
 
@@ -44,7 +46,8 @@ public class TiendaApp {
 
                     if (productoBuscado.venderUnidades(vender)) {
                         double importeVenta = vender * productoBuscado.getPrecio();
-                        importeTotal += importeVenta;
+                        pedidoActual.agregarImporte(importeVenta);
+
                         System.out.println("La compra se ha realizado correctamente, ahora quedan " + productoBuscado.getCantidad() + " unidades de " + productoBuscado.getNombre());
                         System.out.printf("El importe del articulo es de %.2f Euros%n",importeVenta);
 
@@ -66,6 +69,6 @@ public class TiendaApp {
             teclado.nextLine();
             continuar = teclado.nextLine();
         }
-        System.out.printf("EL importe total de la compra es de %.2f Euros%n", importeTotal);
+        System.out.printf("EL importe total de la compra es de %.2f Euros%n", pedidoActual.getImporteTotal());
     }
 }
