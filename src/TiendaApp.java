@@ -70,5 +70,6 @@ public class TiendaApp {
             continuar = teclado.nextLine();
         }
         System.out.printf("EL importe total de la compra es de %.2f Euros%n", pedidoActual.getImporteTotal());
+        System.out.printf("EL precio total con un descuento del 10%% se queda en %.2f Euros%n", pedidoActual.calcularTotalConDescuento(10));
     }
 }

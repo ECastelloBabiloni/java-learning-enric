@@ -10,4 +10,7 @@ public class Pedido {
     public double getImporteTotal(){
         return this.importeTotal;
     }
+    public double calcularTotalConDescuento(double porcentajeDescuento){
+        return this.importeTotal - (this.importeTotal * (porcentajeDescuento /100));
+    }
 }
