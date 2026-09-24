@@ -45,7 +45,9 @@ public class TiendaApp {
                     int vender = teclado.nextInt();
 
                     if (productoBuscado.venderUnidades(vender)) {
-                        double importeVenta = vender * productoBuscado.getPrecio();
+                        LineaPedido lineaVenta = new LineaPedido(productoBuscado, vender);
+                        pedidoActual.agregarLinea(lineaVenta);
+                        double importeVenta = lineaVenta.calcularImporteLinea();
                         pedidoActual.agregarImporte(importeVenta);
 
                         System.out.println("La compra se ha realizado correctamente, ahora quedan " + productoBuscado.getCantidad() + " unidades de " + productoBuscado.getNombre());
@@ -69,6 +71,7 @@ public class TiendaApp {
             teclado.nextLine();
             continuar = teclado.nextLine();
         }
+        pedidoActual.cestaCompra();
         System.out.printf("EL importe total de la compra es de %.2f Euros%n", pedidoActual.getImporteTotal());
         System.out.printf("EL precio total con un descuento del 10%% se queda en %.2f Euros%n", pedidoActual.calcularTotalConDescuento(10));
     }
